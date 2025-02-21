@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+body {
+    margin: 0;
+    padding-top: 100px; /* Space for fixed header */
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f96b05;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0 0 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: white;
+    color: #f96b05;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+section {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #f96b05;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e05a00;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+footer{
+     width: 100%;
+    height: 200px;
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Your Stay in Indore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="hotel-booking.html">Hotel Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Hotel Booking Form</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required><br>
+            
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required><br>
+            
+            <label for="room">Room Type:</label>
+            <select id="room" name="room">
+                <option>Single Room</option>
+                <option>Double Room</option>
+                <option>Suite</option>
+            </select><br>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+     <footer>
+        <p style="margin-top: 50px;">copyright@ indore tourism department</p>
+    </footer>
+</body>
+</html>
