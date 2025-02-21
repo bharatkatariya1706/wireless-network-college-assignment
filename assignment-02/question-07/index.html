@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 700px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #d63333;
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .form-group label {
+            width: 150px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="file"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        textarea {
+            height: 80px;
+        }
+        .form-group input[type="checkbox"], .form-group input[type="radio"] {
+            margin-left: 10px;
+        }
+        .btn-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 20px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Employee Registration Form</h1>
+    <form>
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="radio" name="title" value="Mr."> Mr.
+            <input type="radio" name="title" value="Mrs."> Mrs.
+            <input type="radio" name="title" value="Ms."> Ms.
+        </div>
+
+        <div class="form-group">
+            <label>First Name:</label>
+            <input type="text" placeholder="First Name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mail Address 1:</label>
+            <input type="text" placeholder="Mail Address1">
+        </div>
+
+        <div class="form-group">
+            <label>Mail Address 2:</label>
+            <input type="text" placeholder="Mail Address2">
+        </div>
+
+        <div class="form-group">
+            <label>City:</label>
+            <input type="text" placeholder="City">
+        </div>
+
+        <div class="form-group">
+            <label>State:</label>
+            <select>
+                <option>Gujarat</option>
+                <option>Madhya Pradesh</option>
+                <option>Rajasthan</option>
+                <option>Maharashtra</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Zip:</label>
+            <input type="text" placeholder="Zip Code">
+        </div>
+
+        <div class="form-group">
+            <label>Upload Photo:</label>
+            <input type="file">
+        </div>
+
+        <div class="form-group">
+            <label>E-Mail:</label>
+            <input type="email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <label>Mobile:</label>
+            <input type="tel" placeholder="+91">
+        </div>
+
+        <div class="form-group">
+            <label>Languages Known:</label>
+            <input type="checkbox" value="Gujarati"> Gujarati
+            <input type="checkbox" value="Hindi" checked> Hindi
+            <input type="checkbox" value="English" checked> English
+            <input type="checkbox" value="Marathi"> Marathi
+        </div>
+
+        <div class="form-group">
+            <label>Additional Information:</label>
+            <textarea placeholder="Optional"></textarea>
+        </div>
+
+        <div class="btn-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
