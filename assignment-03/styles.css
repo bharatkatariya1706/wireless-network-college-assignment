@@ -58,8 +58,9 @@ body {
 }
 
 .hero {
-    background: url('./cristiano-firmani-tmTidmpILWw-unsplash.jpg') no-repeat center center/cover;
-    height: 100vh;
+    background: url('./cristiano-firmani-tmTidmpILWw-unsplash.jpg') no-repeat center/cover;
+    background-attachment: fixed;  /* Enables the parallax effect */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +69,7 @@ body {
     position: relative;
     animation: fadeIn 2s ease-in;
 }
+
 
 .hero::before {
     content: '';
