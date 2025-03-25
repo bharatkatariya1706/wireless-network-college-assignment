@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Name - ABC College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        nav {
+            text-align: center;
+            background: #002855;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background: white;
+            color: #004080;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #004080;
+            font-size: 28px;
+        }
+        .course-info {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .teachers, .timetable {
+            margin-top: 30px;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .timetable table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .timetable th, .timetable td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .timetable th {
+            background: #004080;
+            color: white;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img class="logo" src="logo.webp" alt="College Logo">
+        <h1>IET-DAVV</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="academics.html">Academics</a>
+        <a href="admission.html">Admission</a>
+        <a href="gallary.html">Gallery</a>
+    </nav>
+
+    <!-- Course Details -->
+    <div class="container">
+        <h2>📘 SOCIOLOGY</h2>
+        
+        <div class="course-info">
+            <p>
+                This course provides an in-depth study of Sociology and covers topics such as 
+                Social Institutions and Their Role, Culture and Society, Social Change and Movements, and many more. The curriculum is designed to provide 
+                both theoretical knowledge and practical skills, helping students to develop expertise 
+                in the subject.
+            </p>
+        </div>
+
+        <!-- Teachers Section -->
+        <div class="teachers">
+            <h2>👨‍🏫 Teachers</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="teacher1.jpg" alt="Teacher 1">
+                    <h3>Prof. John Doe</h3>
+                    <p>Senior Lecturer</p>
+                </div>
+                <div class="card">
+                    <img src="teacher2.jpg" alt="Teacher 2">
+                    <h3>Dr. Jane Smith</h3>
+                    <p>Assistant Professor</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timetable Section -->
+        <div class="timetable">
+            <h2>📅 Timetable</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Room</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>10:00 AM - 12:00 PM</td>
+                    <td>Room A101</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>2:00 PM - 4:00 PM</td>
+                    <td>Room B202</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>1:00 PM - 3:00 PM</td>
+                    <td>Room C303</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
