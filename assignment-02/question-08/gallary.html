@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #004080;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card p {
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+        }
+        @media screen and (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img class="logo" src="college-logo.png" alt="College Logo">
+        <h1>ABC College</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academics.html">Academics</a>
+            <a href="admission.html">Admission</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="container">
+        <h2>College Gallery</h2>
+        <div class="gallery">
+            <div class="card">
+                <img src="img1.webp" alt="College Building">
+                <p>College Campus</p>
+            </div>
+            <div class="card">
+                <img src="img2.webp" alt="Library">
+                <p>Library</p>
+            </div>
+            <div class="card">
+                <img src="img3.webp" alt="Students in Classroom">
+                <p>Students in Class</p>
+            </div>
+            <div class="card">
+                <img src="img1.webp" alt="Laboratory">
+                <p>Laboratory</p>
+            </div>
+            <div class="card">
+                <img src="img1.webp" alt="Sports Ground">
+                <p>Sports Ground</p>
+            </div>
+            <div class="card">
+                <img src="img2.webp" alt="Cultural Event">
+                <p>Cultural Event</p>
+            </div>
+            <div class="card">
+                <img src="img3.webp" alt="Seminar Hall">
+                <p>Seminar Hall</p>
+            </div>
+            <div class="card">
+                <img src="img1.webp" alt="Hostel">
+                <p>College Hostel</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

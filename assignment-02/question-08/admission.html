@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 50%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #004080;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+        .radio-group input {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #004080;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: #002855;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img class="logo" src="logo.webp" alt="College Logo">
+        <h1>IET-DAVV</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academics.html">Academics</a>
+            <a href="admission.html">Admission</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Admission Form -->
+    <div class="container">
+        <h2>Admission Form</h2>
+        <form action="submit-form.php" method="post" enctype="multipart/form-data">
+
+            <!-- Personal Information -->
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="Other" required> Other</label>
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <!-- Parent/Guardian Details -->
+            <h3>Parent/Guardian Details</h3>
+            <label for="guardian-name">Guardian Name</label>
+            <input type="text" id="guardian-name" name="guardian-name" required>
+
+            <label for="guardian-phone">Guardian Phone Number</label>
+            <input type="tel" id="guardian-phone" name="guardian-phone" required>
+
+            <!-- Educational Qualification -->
+            <h3>Educational Qualification</h3>
+
+            <label for="tenth-marks">10th Marks (Percentage)</label>
+            <input type="number" id="tenth-marks" name="tenth-marks" min="0" max="100" required>
+
+            <label for="tenth-board">10th Board</label>
+            <input type="text" id="tenth-board" name="tenth-board" required>
+
+            <label for="tenth-year">10th Year of Passing</label>
+            <input type="number" id="tenth-year" name="tenth-year" min="2000" max="2050" required>
+
+            <label for="twelfth-marks">12th Marks (Percentage)</label>
+            <input type="number" id="twelfth-marks" name="twelfth-marks" min="0" max="100" required>
+
+            <label for="twelfth-board">12th Board</label>
+            <input type="text" id="twelfth-board" name="twelfth-board" required>
+
+            <label for="twelfth-year">12th Year of Passing</label>
+            <input type="number" id="twelfth-year" name="twelfth-year" min="2000" max="2050" required>
+
+            <!-- Course Selection -->
+            <label for="department">Select Department</label>
+            <select id="department" name="department" required>
+                <option value="">-- Choose a Department --</option>
+                <option value="computer-engineering">Computer Engineering</option>
+                <option value="electronics-communication">Electronics & Communication</option>
+                <option value="civil-engineering">Civil Engineering</option>
+                <option value="mechanical-engineering">Mechanical Engineering</option>
+                <option value="electronics-instrumentation">Electronics & Instrumentation</option>
+                <option value="information-technology">Information Technology</option>
+            </select>
+
+            <!-- Upload Documents -->
+            <label for="photo">Upload Passport Size Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="marksheet">Upload 12th Marksheet</label>
+            <input type="file" id="marksheet" name="marksheet" accept=".pdf,.jpg,.png" required>
+
+            <!-- Additional Information -->
+            <label for="message">Why do you want to join this college?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
